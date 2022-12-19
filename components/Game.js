@@ -27,8 +27,8 @@ class Game {
     this.init();
   }
 
-  switchPage(target) {
-    const {name} = target.dataset;
+  switchPage(name = this.currentPage) {
+    const navElement = document.querySelector(`.nav__item[data-name = ${name}]`);
     if (this.currentPage === name) return;
 
     this.currentPage = name;
@@ -36,7 +36,7 @@ class Game {
     document
       .querySelectorAll(`.nav__item:not([data-name = ${name}])`)
       .forEach((elem) => elem.classList.remove('nav__item_active'));
-    target.classList.add('nav__item_active');
+    navElement.classList.add('nav__item_active');
     document.querySelector('.main:not([hidden])').setAttribute('hidden', true);
     document.querySelector(`.main.${name}`).removeAttribute('hidden');
   }
@@ -93,7 +93,7 @@ class Game {
       }
 
       if (target.classList.contains('nav__item')) {
-        this.switchPage(target);
+        this.switchPage(target.dataset.name);
         if (this.gallery) return;
 
         this.gallery = new Gallery({
@@ -115,10 +115,7 @@ class Game {
         this.newLevel();
       }
       if (target.classList.contains('start-button')) {
-        document.querySelector('.preview').setAttribute('hidden', true);
-        document.querySelector('.result').setAttribute('hidden', true);
-        document.querySelector('.main.game').removeAttribute('hidden');
-        document.querySelector('.gallery').setAttribute('hidden', true);
+        this.switchPage('game');
         this.start();
       }
     });
