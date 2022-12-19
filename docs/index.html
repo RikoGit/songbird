@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=2.0" name="viewport" />
+    <title>Songbird</title>
+    <meta name="description" content="Songbird" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="data:image/png;base64,AAABAAEAGBgAAAEAIACICQAAFgAAACgAAAAYAAAAMAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AAA+/gAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAABP8AAET/AAAAAAAAAAAAAAAAAAAA/wAAAP4AAGD/AAD2/gAAfv8AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAE/gAAgv8AAPj+AABi/wAAAAAAAAAAAAAA/gAAJv8AAOr+AAD//gAA+v8AAGQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AABk/gAA+v4AAP/+AADs/gAAJgAAAAD/AAAA/wAAqP8AAP/+AAD//gAA1v4AABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+AAAW/wAA1P8AAP/+AAD//wAAqP8AAAD/AAAo/wAA8P8AAP//AAD6/wAASgAAAAAAAAAA/wAAGv8AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAI/wAAGgAAAAAAAAAA/wAARv8AAPj/AAD//gAA8P8AACj/AABy/wAA//4AAP/+AAC+/wAABgAAAAD/AAAO/wAAyv8AAJb/AAAAAAAAAAAAAAAAAAAAAAAAAP8AAAD/AACW/wAAyv8AAA4AAAAA/gAABv4AALz+AAD//wAA//8AAHL/AACy/wAA//8AAP//AABmAAAAAAAAAAD/AABu/wAA//8AAP//AACE/wAAAAAAAAAAAAAA/wAAAP8AAIT+AAD//wAA//4AAG4AAAAAAAAAAP8AAGT+AAD//wAA//4AALT/AADc/wAA//8AAP/+AAAsAAAAAAAAAAD+AADC/wAA//8AAP/+AABo/wAAAAAAAAAAAAAA/wAAAP4AAGj/AAD//wAA//8AAMIAAAAAAAAAAP8AACr/AAD//wAA//8AANz/AADw/wAA//4AAP//AAAQAAAAAAAAAAD+AADs/wAA//4AAP/+AAAWAAAAAAAAAAAAAAAAAAAAAP4AABb+AAD//wAA//4AAOwAAAAAAAAAAP4AAA7+AAD//wAA//4AAPD/AADw/wAA//8AAP/+AAAOAAAAAAAAAAD+AADs/wAA//8AAP//AAAaAAAAAAAAAAAAAAAAAAAAAP8AABj+AAD//wAA//4AAOwAAAAAAAAAAP8AAA7+AAD//wAA//4AAPD/AADc/wAA//8AAP/+AAAqAAAAAAAAAAD/AAC+/wAA//8AAP//AAB4/wAAAAAAAAAAAAAA/gAAAP8AAHj/AAD//wAA//8AAL4AAAAAAAAAAP4AACz/AAD//wAA//8AANr/AACy/wAA//4AAP//AABiAAAAAAAAAAD/AABk/wAA/P4AAP/+AABs/wAAAAAAAAAAAAAA/wAAAP4AAGz+AAD//gAA/P4AAGQAAAAAAAAAAP8AAGb+AAD//gAA//8AALL/AABu/wAA//8AAP//AAC8/wAABgAAAAD/AAAI/wAAtv4AAHoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAB6/gAAtv8AAAgAAAAA/wAABv8AAMD+AAD//wAA//8AAG7/AAAk/wAA7v8AAP//AAD6/wAASgAAAAAAAAAA/wAADP8AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+AAAE/wAADAAAAAAAAAAA/wAAUP8AAPr/AAD//gAA7v4AACT/AAAA/gAAoP4AAP/+AAD//wAA2v8AABwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+AAAg/wAA3v4AAP/+AAD//wAAnv8AAAAAAAAA/wAAIP8AAOT+AAD//wAA+P8AAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AABc/wAA+P4AAP/+AADk/gAAHgAAAAAAAAAA/wAAAP4AAFL/AADy/wAAdP8AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/AAAC/gAAbv8AAPL+AABO/wAAAAAAAAAAAAAAAAAAAAAAAAD/AAAy/wAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/wAAAv4AACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AP///wD///8A7//nAMf/4wCH/+EAj//xAI5+cQAePHgAHH44ABx+OAAcfjgAHH44AB5+eACO/3EAj//xAIf/4QDH/+MA7//3AP///wD///8A////AP///wA="
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <nav class="nav">
+          <a href="#" class="nav__item nav__item_active" data-name="preview">Main</a
+          ><a href="#" class="nav__item" data-name="game">Game</a
+          ><a href="#" class="nav__item" data-name="gallery">Gallery</a>
+        </nav>
+      </header>
+      <main class="main preview">
+        <article class="preview-page">
+          <h1 class="preview-page__title">
+            Приложение-викторина для распознавания птиц по их голосам.
+          </h1>
+          <img
+            class="preview__img"
+            src="./images/preview1.svg"
+            alt="preview"
+            width="100"
+            height="100"
+          />
+          <button class="start-button">Start game</button>
+        </article>
+      </main>
+      <main class="main game" hidden>
+        <p class="game__score">Score: <span class="game__score-value">0</span></p>
+        <ul class="completeness"></ul>
+        <article class="description" aria-label="question description">
+          <h3 class="description__title">******</h3>
+          <img class="description__img" src="./images/birds/default.jpg" alt="default image" />
+        </article>
+        <article class="list" aria-label="list of response options"></article>
+        <button class="next-level-button" disabled>Next level</button>
+      </main>
+      <main class="main result" hidden>
+        <article class="result-page">
+          <h2 class="result-page__score">Score: <span class="result-score__value">0</span></h2>
+          <div class="result-page__win" hidden>
+            <p class="result-page__text">Great job!</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xml:space="preserve"
+              id="Lager_1"
+              x="0"
+              y="0"
+              style="enable-background: new 0 0 131.4 97.5"
+              version="1.1"
+              viewBox="0 0 131.4 97.5"
+              class="result-page__win-img"
+            >
+              <style>
+                .st0 {
+                  fill: #607380;
+                }
+                .st1 {
+                  fill: #808b96;
+                }
+              </style>
+              <path
+                d="M127.3 31.4c-2.7 6-9.7 16.1-17.1 21.1-10.7 7.1-15.9 5.5-19.3.5-3.3-5-3.5-11.5 7.1-18.6 7.6-5.1 20.2-7 27-7 .6 0 2.4 3.6 2.3 4z"
+                class="st0"
+              />
+              <path
+                d="M109.3 36.7c-1.6-3.7-6.7-23.4-6.7-23.4C102.6 6 93 0 81.2 0S60.8 8.2 59.8 13.3C58.7 18.4 53 29.8 53 29.8L50.8 33c-2.2 3.2-10.5 11.5-10.5 18.8 0 15 16.9 27.1 37.7 27.1 20.8 0 37.7-12.1 37.7-27.1 0-5.6-4.8-11.5-6.4-15.1z"
+                class="st1"
+              />
+              <ellipse
+                cx="31.9"
+                cy="75.3"
+                class="st1"
+                rx="37"
+                ry="5.1"
+                transform="rotate(-36.038 31.867 75.328)"
+              />
+              <ellipse
+                cx="30.1"
+                cy="69.2"
+                class="st1"
+                rx="37"
+                ry="5.1"
+                transform="rotate(-36.038 30.088 69.174)"
+              />
+              <path
+                d="M106.3 15.2c0 1.4-2.7 2.6-4.3 2.6s-2.6-1.1-2.6-2.6 1-2.6 2.6-2.6 4.3 1.1 4.3 2.6z"
+                style="fill: #eee97c"
+              />
+              <circle cx="88.9" cy="15" r="3.4" style="fill: #1a161a" />
+              <circle cx="88.9" cy="13.6" r="1" style="fill: #fff" />
+              <path
+                d="M34.7 61.1s3.5-19.7 11.9-29.4 13.8-9.6 18.3-5.7 6.5 10.2-1.9 19.8-28.3 15.3-28.3 15.3z"
+                class="st0"
+              />
+              <path
+                d="M102.5 16.4c-1.6 0-2.9-.6-3-.9 0-.1.1-.1.2-.1.2 0 .5.1.9.1.6.1 1.5.3 2.4.3h.5c1.2 0 2.2-.3 2.7-.4h.2s-1.4.9-3.4.9c-.2.1-.4.1-.5.1z"
+                style="fill: #ddd54a"
+              />
+              <path
+                d="M99.7 15.3c.2 0 .5.1.9.1.6.1 1.5.3 2.4.3h.5c1.2 0 2.2-.3 2.7-.4h.2c-.1.1-1.5.9-3.4.9h-.4c-1.6 0-2.9-.6-3-.9v-.1c-.1.2 0 .1.1.1m0 0c-.1 0-.2 0-.2.1-.1.2 1.2 1 3 1h.4c2-.1 3.5-.9 3.4-1-.1 0-1.3.4-2.9.4h-.5c-1.5-.1-2.8-.5-3.2-.5z"
+                style="fill: #ded549"
+              />
+              <path d="m116.713 24.12 4.67-2.71 9.94 17.125-4.67 2.71z" />
+              <circle cx="117.9" cy="20.7" r="5" class="st0" />
+              <path
+                d="M128.3 32.2c-.1.2-6.6 0-6.8-.3-.2-.3 2.1-6.5 2.5-6.3.5.2 4.4 6.3 4.3 6.6z"
+                class="st0"
+              />
+            </svg>
+          </div>
+          <button class="start-button">Start again?</button>
+        </article>
+      </main>
+      <main class="main gallery" hidden></main>
+      <footer class="footer">
+        <a class="footer__link" href="https://github.com/RikoGit" target="_blank">github</a>
+        <span class="footer__year">2022</span>
+      </footer>
+    </div>
+    <script async src="./index.js"></script>
+  </body>
+</html>
