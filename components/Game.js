@@ -21,7 +21,7 @@ class Game {
     this.levels = [];
     this.gallery = null;
     this.isGameOver = false;
-    this.currentAudio = null;
+    this.currentAudio = new Audio();
     this.audioErrorElement = null;
     this.audioCorrectElement = null;
     this.init();
@@ -32,7 +32,7 @@ class Game {
     if (this.currentPage === name) return;
 
     this.currentPage = name;
-    if (this.currentAudio) this.currentAudio.pause();
+    this.currentAudio.pause();
     document
       .querySelectorAll(`.nav__item:not([data-name = ${name}])`)
       .forEach((elem) => elem.classList.remove('nav__item_active'));
@@ -97,7 +97,7 @@ class Game {
           data: this.data,
           levelNames: this.levelNames,
           onAudioPlay: (audioElement) => {
-            if (this.currentAudio && this.currentAudio !== audioElement) this.currentAudio.pause();
+            if (this.currentAudio !== audioElement) this.currentAudio.pause();
             this.currentAudio = audioElement;
           },
         });
@@ -175,6 +175,7 @@ class Game {
     document.querySelectorAll('.list__button').forEach((elem) => {
       elem.classList.remove('list__button_type_correct');
       elem.classList.remove('list__button_type_incorrect');
+      elem.classList.remove('list__button_state_play');
       elem.setAttribute('aria-selected', false);
     });
     document.querySelectorAll('.tabpanel').forEach((elem) => {
@@ -194,7 +195,7 @@ class Game {
           document.querySelector('.next-level-button').removeAttribute('disabled');
         },
         onAudioPlay: (audioElement) => {
-          if (this.currentAudio && this.currentAudio !== audioElement) this.currentAudio.pause();
+          if (this.currentAudio !== audioElement) this.currentAudio.pause();
           this.currentAudio = audioElement;
         },
       });
@@ -211,6 +212,11 @@ class Game {
     document.querySelector('.start-button').removeAttribute('hidden');
     document.querySelector('.main.result').removeAttribute('hidden');
     this.currentPage = 'result';
+    if (document.querySelector('.list__button_state_play'))
+      document
+        .querySelector('.list__button_state_play')
+        .classList.remove('list__button_state_play');
+    this.currentAudio.pause();
     if (this.score === maxScore) {
       document.querySelector('.result-page__win').removeAttribute('hidden');
     } else document.querySelector('.result-page__win').setAttribute('hidden', true);
