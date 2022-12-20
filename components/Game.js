@@ -44,9 +44,6 @@ class Game {
   onClickHandler() {
     document.querySelector('.app').addEventListener('click', (event) => {
       const {target} = event;
-      if (target.play) {
-        console.log('fudio');
-      }
       if (target.classList.contains('list__button')) {
         if (
           !document
@@ -213,6 +210,7 @@ class Game {
     document.querySelector('.game').setAttribute('hidden', true);
     document.querySelector('.start-button').removeAttribute('hidden');
     document.querySelector('.main.result').removeAttribute('hidden');
+    this.currentPage = 'result';
     if (this.score === maxScore) {
       document.querySelector('.result-page__win').removeAttribute('hidden');
     } else document.querySelector('.result-page__win').setAttribute('hidden', true);

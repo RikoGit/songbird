@@ -16,7 +16,16 @@ class Level {
       const audioElement = new Audio(`./sounds/birds/${this.data[i].audio}`);
       audioElement.controls = true;
       this.data[i].audioElement = audioElement;
-      audioElement.onplay = () => this.onAudioPlay(audioElement);
+      audioElement.onplay = () => {
+        document.querySelector(`#tab-${i + 1}`).classList.add('list__button_state_play');
+        this.onAudioPlay(audioElement);
+      };
+      audioElement.onpause = () => {
+        document.querySelector(`#tab-${i + 1}`).classList.remove('list__button_state_play');
+      };
+      audioElement.onended = () => {
+        document.querySelector(`#tab-${i + 1}`).classList.remove('list__button_state_play');
+      };
     }
     this.listNode = this.getListNode();
   }

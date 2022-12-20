@@ -282,6 +282,12 @@ button:focus {
 .list__button_type_correct::before {
   background-color: var(--correct-color);
 }
+.list__button_state_play:not([aria-selected='true'])::after {
+  content: url('./images/audio.svg');
+  display: block;
+  width: 20px;
+  height: 20px;
+}
 .tablist {
   margin-bottom: 3px;
   gap: 3px;
